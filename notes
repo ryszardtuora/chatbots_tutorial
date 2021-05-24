@@ -1,0 +1,16 @@
+rasa visualize
+rasa help
+rasa test
+jak jest z otter
+
+
+intents:
+  link
+  api
+  vaccination
+  
+
+
+transformers
+rasa
+spacy
