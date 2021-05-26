@@ -4,13 +4,44 @@ rasa test
 jak jest z otter
 
 
-intents:
-  link
-  api
-  vaccination
-  
+
+buttons do qa
+
+formularz:
+	set policies
 
 
+fallback
+chatette
+deactibating forms
+out of scope intents
+
+homework:
+	-add asking for different features via the api (regex based, or entity based)
+        -add asking for different data via the vaccine form (location)
+        -add the ability to restate gathered info via an action
+        -find and add more FAQ data,
+        -add a "what can you do?" intent
+        -enrich the QA action, so that a user can choose one of the suggested questions, and only receive one answer paired with that question
+
+
+
+script:
+  - $ rasa init
+  - add News intent
+  - add api intent
+  + add What can you do? Intent
+  - add vaccination intent
+  + broaden the vaccination form by an additional slot and entity
+  - add QA intent  
+  - $ rasa test --cross-validate
+
+
+
+
+chatette
+numpy
+scipy
 transformers
 rasa
 spacy

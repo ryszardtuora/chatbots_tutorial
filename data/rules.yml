@@ -11,3 +11,34 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: get news
+  steps:
+  - intent: get_news
+  - action: utter_news
+  
+- rule: answer qa questions
+  steps:
+  - intent: qa
+  - action: answer_qa
+  
+- rule: retrieve api info
+  steps:
+  - intent: get_api
+  - action: action_api
+
+- rule: Vaccine Form activation
+  steps:
+  - intent: vaccination
+  - action: vaccination_form
+  - active_loop: vaccination_form
+
+- rule: Vaccine Form submission
+  condition:
+  - active_loop: vaccination_form
+  steps:
+  - action: vaccination_form
+  - active_loop: null
+#    - slot_was_set:
+#    - requested_slot: null
+  - action: utter_vaccination_form_filled
