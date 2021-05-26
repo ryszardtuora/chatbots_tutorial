@@ -1,0 +1,45 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_regulations
+  - get_api
+  
+actions:
+  - action_api
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  
+  utter_regulations:
+    - text: "Please visit https://www.gov.pl/web/coronavirus/temporary-limitations, for more up to date info."
+
+  utter_abilities:
+    - text: "You can ask me about the current statistics relating to the pandemic, I can help you register for the vaccination, or answer some other questions you might have."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
