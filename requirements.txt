@@ -1,0 +1,6 @@
+scipy
+numpy
+rasa
+chatette
+sentence-transformers
+bs4

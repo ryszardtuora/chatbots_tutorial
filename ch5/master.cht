@@ -1,0 +1,40 @@
+%[inform](training: 100)
+  ~[IAM?] ~[FULLNAME]
+
+~[IAM]
+  [My|The] name is
+  I['m| am] [called?]
+  They call me
+
+~[FULLNAME]
+  ~[FNAME] [~[FNAME]|~[MNAME]?] ~[SNAME]
+
+~[FNAME]
+  John
+  Peter
+  Andrew
+  Jason
+  Victor
+  Frank
+  Julia
+  Kate
+  Anne
+  Barbara
+  Mary
+  Theresa
+
+~[MNAME]
+  A.
+  B.
+  R.
+  T.
+  C.
+
+~[SNAME]
+  Rowlins
+  Jackson
+  Perry
+  Smith
+  Roberts
+  Harrelson
+  Chesterton
