@@ -1,0 +1,111 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - get_regulations
+  - get_api
+  - abilities
+  - vaccination
+  - inform
+  - qa
+
+
+entities:
+  - person_name
+  - sex
+  - age
+  - email
+
+slots:
+  person_name:
+    type: text
+  sex:
+    type: text
+  age:
+    type: text
+  infected:
+    type: bool
+  email:
+    type: text
+
+actions:
+  - answer_qa
+  - action_api
+
+forms:
+  vaccination_form:
+    required_slots:
+      person_name:
+        - type: from_entity
+          entity: person_name
+      sex:
+        - type: from_entity
+          entity: sex
+      age:
+        - type: from_entity
+          entity: age
+      infected:
+        - type: from_intent
+          value: false
+          intent: deny
+        - type: from_intent
+          value: true
+          intent: affirm
+      email:
+        - type: from_entity
+          entity: email
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  
+  utter_regulations:
+    - text: "Please visit https://www.gov.pl/web/coronavirus/temporary-limitations, for more up to date info."
+
+  utter_abilities:
+    - text: "You can ask me about the current statistics relating to the pandemic, I can help you register for the vaccination, or answer some other questions you might have."
+
+  utter_ask_person_name:
+    - text: "What is your name?"
+
+  utter_ask_sex:
+    - text: "What is your sex?"
+
+  utter_ask_age:
+    - text: "What is your age?"
+
+  utter_ask_infected:
+    - text: "Have you ever undergone the Coronavirus infection?"
+
+  utter_ask_email:
+    - text: "What is your email?"
+    
+  utter_vaccination_form_filled:
+    - text: "Your submission has been registered {person_name}, we will get back to you!"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
