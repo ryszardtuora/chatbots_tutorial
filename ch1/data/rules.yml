@@ -12,3 +12,12 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Sending the link to the regulations page
+  steps:
+  - intent: get_regulations
+  - action: utter_regulations
+
+- rule: Getting the statistics via the API
+  steps:
+  - intent: get_api
+  - action: action_api

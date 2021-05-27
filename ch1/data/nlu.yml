@@ -61,3 +61,22 @@ nlu:
     - nope
     - nah
 
+- intent: get_regulations
+  examples: |
+    - What is the status of the pandemic?
+    - what are the current regulations?
+    - what are the rules right now?
+    - has anything of importance happened?
+    - are there any new important announcements?
+    - can you give me some info about rules as of now
+
+
+- intent: get_api
+  examples: |
+    - how many people fell sick to coronavirus today?
+    - how many people have died of covid
+    - give me the figures for yesterday
+    - i want to see the numbers
+    - i want to see the number of new cases
+    - please show me the statistics
+
